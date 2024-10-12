@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gamerablox</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="body" class="body">
+
+    <div class="title-banner">
+        <div class="game-title">GAMERABLOX</div>
+        <div class="sub-title">A Time Game Function</div>
+        <div class="blink" id="key-text">Press the Q button to Continue</div>
+    </div>
+
+
+<div class="container">
+    <div class="mirror-off">the</div>
+    <div class="time">
+        <div class="realtime" id="realtime">
+        <div class="hours" id="hours">00</div>
+        <div class="slash">:</div>
+        <div class="minutes" id="minutes">00</div>
+        <div class="slash">:</div>
+        <div class="seconds" id="seconds">00</div>
+        </div>
+
+        <div class="hyphen">-</div>
+
+        <div class="settime-place" id="settime">
+            <div class="hour" id="hour">00</div>
+            <div class="slash">:</div>
+            <div class="minute" id="minute">00</div>
+            <div class="slash">:</div>
+            <div class="second" id="second">00</div>
+        </div>
+    </div>
+
+    <div class="title-link">
+    <span class="title">Gamerablox®</span>
+    <span class="inertia">A Time Game Function</span>
+    </div>
+    <div class="settings">Settings (S)</div>
+    <div class="activate">Activate (A)</div>
+
+    <div class="settings-pane">
+        <span class="settime" title="Set the time to start the game">Set Time (T)</span>
+        <span class="colors" title="Set the color of your choice. To set two colors put Linear-gradient(45deg, firstcolor, secondcolor)to set two colors">Set Color (C)</span>
+    </div>
+
+        <!-- Making the actual game -->
+
+    <div class="game-cover">
+        <div class="question-title">Questions</div>
+        <div class="not-activated">You have not yet activated it.<br>Activation key is ₦3000.</div>
+
+        <div class="questions">
+            <div class="question-1">
+                <div class="one" style="cursor: default;">1. The maintenance of a constant internal environment in an organism is known as ........ ? <span style="font-weight: bolder;font-family: cursive;">(State Exams 2024 No.1-Biology)</span>.</div><br> 
+                <div class="options1">
+                    <div class="A" id="1a">A.Homeostasis</div><br>
+                    <div class="B" id="1b">B.Dialysis</div><br>
+                    <div class="C" id="1c">C.Osmoreglation</div><br>
+                    <div class="D" id="1d">D.Diuresis</div><br>
+                </div>
+                <script>
+                    const oneA = document.querySelector('.options1 .A');const oneB = document.querySelector('.options1 .B');const oneC = document.querySelector('.options1 .C');const oneD = document.querySelector('.options1 .D');let onea = document.getElementById('1a');let oneb = document.getElementById('1b');let onec = document.getElementById('1c');let oned = document.getElementById('1d');
+                    oneA.addEventListener('click',()=>{onea.style.background ='green'});
+                    oneB.addEventListener('click',()=>{oneb.style.background ='red';onea.style.background ='green'});
+                    oneC.addEventListener('click',()=>{onec.style.background ='red';onea.style.background ='green'});
+                    oneD.addEventListener('click',()=>{oned.style.background ='red';onea.style.background ='green'});
+                </script>
+            </div>
+
+            <div class="question-2">
+                <div class="two" style="cursor: default;">2. The prerequisite for orderliness is ? <span style="font-weight: bolder;font-family: cursive;">(WASSCE Exams 2022 No.1-Civic Education)</span>.</div><br> 
+                <div class="options2">
+                    <div class="A" id="2a">A.Humility</div><br>
+                    <div class="B" id="2b">B.Hardwork</div><br>
+                    <div class="C" id="2c">C.Politeness</div><br>
+                    <div class="D" id="2d">D.Morality</div><br>
+                </div>
+                <script>
+                    const twoA = document.querySelector('.options2 .A');const twoB = document.querySelector('.options2 .B');const twoC = document.querySelector('.options2 .C');const twoD = document.querySelector('.options2 .D');let twoa = document.getElementById('2a');let twob = document.getElementById('2b');let twoc = document.getElementById('2c');let twod = document.getElementById('2d');
+                    twoA.addEventListener('click',()=>{twoa.style.background ='red';twod.style.background ='green'});
+                    twoB.addEventListener('click',()=>{twob.style.background ='red';twod.style.background ='green'});
+                    twoC.addEventListener('click',()=>{twoc.style.background ='red';twod.style.background ='green'});
+                    twoD.addEventListener('click',()=>{twod.style.background ='green';});
+                </script>
+            </div>
+
+            <div class="question-3">
+                <div class="three" style="cursor: default;">3. Which of the following phenomena causes capillarity of liquids in tudes of narrow bore? <span style="font-weight: bolder;font-family: cursive;">(WASSCE Exams 2006 No.1-Physics)</span>.</div><br> 
+                <div class="options3">
+                    <div class="A" id="3a">A.Viscosity</div><br>
+                    <div class="B" id="3b">B.Surface Tension</div><br>
+                    <div class="C" id="3c">C.Osmosis</div><br>
+                    <div class="D" id="3d">D.Brownian motion</div><br>
+                </div>
+                <script>
+                    const threeA = document.querySelector('.options3 .A');const threeB = document.querySelector('.options3 .B');const threeC = document.querySelector('.options3 .C');const threeD = document.querySelector('.options3 .D');let threea = document.getElementById('3a');let threeb = document.getElementById('3b');let threec = document.getElementById('3c');let threed = document.getElementById('3d');
+                    threeA.addEventListener('click',()=>{threea.style.background ='red';threeb.style.background ='green'});
+                    threeB.addEventListener('click',()=>{threeb.style.background ='green';});
+                    threeC.addEventListener('click',()=>{threec.style.background ='red';threeb.style.background ='green'});
+                    threeD.addEventListener('click',()=>{threed.style.background ='red';threeb.style.background ='green'});
+                </script>
+            </div>
+
+            <div class="question-4">
+                <div class="four" style="cursor: default;">4. Which of the following is a characteristic of parallel databases? <span style="font-weight: bolder;font-family: cursive;">(WASSCE Exams 2018 No .40-Data Processing)</span>.</div><br> 
+                <div class="options4">
+                    <div class="A" id="4a">A.there can be shared memory or shared disk</div><br>
+                    <div class="B" id="4b">B.they are connected using public purpose networks</div><br>
+                    <div class="C" id="4c">C.machines in this environment are in different locations</div><br>
+                    <div class="D" id="4d">D.it has local autonomy</div><br>
+                </div>
+                <script>
+                    const fourA = document.querySelector('.options4 .A');const fourB = document.querySelector('.options4 .B');const fourC = document.querySelector('.options4 .C');const fourD = document.querySelector('.options4 .D');let foura = document.getElementById('4a');let fourb = document.getElementById('4b');let fourc = document.getElementById('4c');let fourd = document.getElementById('4d');
+                    fourA.addEventListener('click',()=>{foura.style.background ='green';});
+                    fourB.addEventListener('click',()=>{fourb.style.background ='red';foura.style.background ='green'});
+                    fourC.addEventListener('click',()=>{fourc.style.background ='red';foura.style.background ='green'});
+                    fourD.addEventListener('click',()=>{fourd.style.background ='red';foura.style.background ='green'});
+                </script>
+            </div>
+
+            <div class="question-5">
+            <div class="five" style="cursor: default;">5. what is the oxidation number of nitrogen Cu²+ in Al(NO₃)³? <span style="font-weight: bolder;font-family: cursive;">(WASSCE Exams 2018 No .24-Chemistry)</span>.</div><br> 
+                <div class="options5">
+                    <div class="A" id="5a">A.+1</div><br>
+                    <div class="B" id="5b">B.+3</div><br>
+                    <div class="C" id="5c">C.+5</div><br>
+                    <div class="D" id="5d">D.+6</div><br>
+                </div>
+                <script>
+                    const fiveA = document.querySelector('.options5 .A');const fiveB = document.querySelector('.options5 .B');const fiveC = document.querySelector('.options5 .C');const fiveD = document.querySelector('.options5 .D');let fivea = document.getElementById('5a');let fiveb = document.getElementById('5b');let fivec = document.getElementById('5c');let fived = document.getElementById('5d');
+                    fiveA.addEventListener('click',()=>{fivea.style.background ='red';fivec.style.background ='green'});
+                    fiveB.addEventListener('click',()=>{fiveb.style.background ='red';fivec.style.background ='green'});
+                    fiveC.addEventListener('click',()=>{fivec.style.background ='green';});
+                    fiveD.addEventListener('click',()=>{fived.style.background ='red';fivec.style.background ='green'});
+                </script>
+            </div>
+
+            <div class="question-6">
+            <div class="six" style="cursor: default;">6. The Traffic in Persons Prohibition and Administration Act was passed in Nigeria in <span style="font-weight: bolder;font-family: cursive;">(WASSCE Exams 2006 No .3-Civic Education)</span>.</div><br> 
+                <div class="options6">
+                    <div class="A" id="6a">A.December, 2001</div><br>
+                    <div class="B" id="6b">B.October, 2002</div><br>
+                    <div class="C" id="6c">C.August, 2003</div><br>
+                    <div class="D" id="6d">D.April, 2004</div><br>
+                </div>
+                <script>
+                    const sixA = document.querySelector('.options6 .A');const sixB = document.querySelector('.options6 .B');const sixC = document.querySelector('.options6 .C');const sixD = document.querySelector('.options6 .D');let sixa = document.getElementById('6a');let sixb = document.getElementById('6b');let sixc = document.getElementById('6c');let sixd = document.getElementById('6d');
+                    sixA.addEventListener('click',()=>{sixa.style.background ='red';sixc.style.background ='green'});
+                    sixB.addEventListener('click',()=>{sixb.style.background ='red';sixc.style.background ='green'});
+                    sixC.addEventListener('click',()=>{sixc.style.background ='green';});
+                    sixD.addEventListener('click',()=>{sixd.style.background ='red';sixc.style.background ='green'});
+                </script>
+            </div>
+
+            <div class="question-7">
+                <div class="seven" style="cursor: default;">7. Muscle act in opposite direction in order to? <span style="font-weight: bolder;font-family: cursive;">(WASSCE Exams 2016 No .11-Biology)</span>.</div><br> 
+                    <div class="options7">
+                        <div class="A" id="7a">A.prevent muscle fatigue</div><br>
+                        <div class="B" id="7b">B.regulate bodily activities</div><br>
+                        <div class="C" id="7c">C.prevent dislocation at joints</div><br>
+                        <div class="D" id="7d">D.cause a bone to move</div><br>
+                    </div>
+                    <script>
+                        const sevenA = document.querySelector('.options7 .A');const sevenB = document.querySelector('.options7 .B');const sevenC = document.querySelector('.options7 .C');const sevenD = document.querySelector('.options7 .D');let sevena = document.getElementById('7a');let sevenb = document.getElementById('7b');let sevenc = document.getElementById('7c');let sevend = document.getElementById('7d');
+                        sevenA.addEventListener('click',()=>{sevena.style.background ='red';sevend.style.background ='green'});
+                        sevenB.addEventListener('click',()=>{sevenb.style.background ='red';sevend.style.background ='green'});
+                        sevenC.addEventListener('click',()=>{sevenc.style.background ='red';sevend.style.background ='green'});
+                        sevenD.addEventListener('click',()=>{sevend.style.background ='green';});
+                    </script>
+                </div>
+
+                <div class="question-8">
+                    <div class="eight" style="cursor: default;">8. An ammeter can be adapted to measure potential difference by using a? <span style="font-weight: bolder;font-family: cursive;">(WASSCE Exams 2014 No .35-Physics)</span>.</div><br> 
+                        <div class="options8">
+                            <div class="A" id="8a">A.Multiplier</div><br>
+                            <div class="B" id="8b">B.Resistance box</div><br>
+                            <div class="C" id="8c">C.Rheostat</div><br>
+                            <div class="D" id="8d">D.Shunt</div><br>
+                        </div>
+                        <script>
+                            const eightA = document.querySelector('.options8 .A');const eightB = document.querySelector('.options8 .B');const eightC = document.querySelector('.options8 .C');const eightD = document.querySelector('.options8 .D');let eighta = document.getElementById('8a');let eightb = document.getElementById('8b');let eightc = document.getElementById('8c');let eightd = document.getElementById('8d');
+                            eightA.addEventListener('click',()=>{eighta.style.background ='green';});
+                            eightB.addEventListener('click',()=>{eightb.style.background ='red';eighta.style.background ='green'});
+                            eightC.addEventListener('click',()=>{eightc.style.background ='red';eighta.style.background ='green'});
+                            eightD.addEventListener('click',()=>{eightd.style.background ='red';eighta.style.background ='green'});
+                        </script>
+                    </div>
+
+                    <div class="question-9">
+                        <div class="nine" style="cursor: default;">9. Nationalism is Nigeria eventually led to? <span style="font-weight: bolder;font-family: cursive;">(WASSCE Exams 2020 No .1-Civic Education)</span>.</div><br> 
+                            <div class="options9">
+                                <div class="A" id="9a">A.creation of states</div><br>
+                                <div class="B" id="9b">B.decolonization</div><br>
+                                <div class="C" id="9c">C.national renaissance</div><br>
+                                <div class="D" id="9d">D.the end of military rule</div><br>
+                            </div>
+                            <script>
+                                const nineA = document.querySelector('.options9 .A');const nineB = document.querySelector('.options9 .B');const nineC = document.querySelector('.options9 .C');const nineD = document.querySelector('.options9 .D');let ninea = document.getElementById('9a');let nineb = document.getElementById('9b');let ninec = document.getElementById('9c');let nined = document.getElementById('9d');
+                                nineA.addEventListener('click',()=>{ninea.style.background ='red';nineb.style.background ='green'});
+                                nineB.addEventListener('click',()=>{nineb.style.background ='green';});
+                                nineC.addEventListener('click',()=>{ninec.style.background ='red';nineb.style.background ='green'});
+                                nineD.addEventListener('click',()=>{nined.style.background ='red';nineb.style.background ='green'});
+                            </script>
+                        </div>
+
+                        <div class="question-10">
+                            <div class="ten" style="cursor: default;">10. The quality of electricity required to discharged 1 mole of univalent ion is <span style="font-weight: bolder;font-family: cursive;">(WASSCE Exams 2016 No 35-Chemistry)</span>.</div><br> 
+                                <div class="options10">
+                                    <div class="A" id="10a">A.9600c</div><br>
+                                    <div class="B" id="10b">B.48250c</div><br>
+                                    <div class="C" id="10c">C.96500c</div><br>
+                                    <div class="D" id="10d">D.193000c</div><br>
+                                </div>
+                                <script>
+                                    const tenA = document.querySelector('.options10 .A');const tenB = document.querySelector('.options10 .B');const tenC = document.querySelector('.options10 .C');const tenD = document.querySelector('.options10 .D');let tena = document.getElementById('10a');let tenb = document.getElementById('10b');let tenc = document.getElementById('10c');let tend = document.getElementById('10d');
+                                    tenA.addEventListener('click',()=>{tena.style.background ='green';});
+                                    tenB.addEventListener('click',()=>{tenb.style.background ='red';tena.style.background ='green'});
+                                    tenC.addEventListener('click',()=>{tenc.style.background ='red';tena.style.background ='green'});
+                                    tenD.addEventListener('click',()=>{tend.style.background ='red';tena.style.background ='green'});
+                                </script>
+                            </div>
+
+                            <div class="question-11">
+                                <div class="eleven" style="cursor: default;">11. Lateral meristem in flowering plants is found in the <span style="font-weight: bolder;font-family: cursive;">(WASSCE Exams 2016 No 12-Biology)</span>.</div><br> 
+                                    <div class="options11">
+                                        <div class="A" id="11a">A.cambium</div><br>
+                                        <div class="B" id="11b">B.cortex</div><br>
+                                        <div class="C" id="11c">C.pericycle</div><br>
+                                        <div class="D" id="11d">D.pith</div><br>
+                                    </div>
+                                    <script>
+                                        const elevenA = document.querySelector('.options11 .A');const elevenB = document.querySelector('.options11 .B');const elevenC = document.querySelector('.options11 .C');const elevenD = document.querySelector('.options11 .D');let elevena = document.getElementById('11a');let elevenb = document.getElementById('11b');let elevenc = document.getElementById('11c');let elevend = document.getElementById('11d');
+                                        elevenA.addEventListener('click',()=>{elevena.style.background ='green';});
+                                        elevenB.addEventListener('click',()=>{elevenb.style.background ='red';elevena.style.background ='green'});
+                                        elevenC.addEventListener('click',()=>{elevenc.style.background ='red';elevena.style.background ='green'});
+                                        elevenD.addEventListener('click',()=>{elevend.style.background ='red';elevena.style.background ='green'});
+                                    </script>
+                                </div>
+
+                                <div class="question-12">
+                                    <div class="twelve" style="cursor: default;">12. A bulb marked 240v, 40w is used for 30 minutes.Calculate the heat generated <span style="font-weight: bolder;font-family: cursive;">(WASSCE Exams 2007 No 43-Physics)</span>.</div><br> 
+                                        <div class="options12">
+                                            <div class="A" id="12a">A.320J</div><br>
+                                            <div class="B" id="12b">B.400J</div><br>
+                                            <div class="C" id="12c">C.10800J</div><br>
+                                            <div class="D" id="12d">D.72000J</div><br>
+                                        </div>
+                                        <script>
+                                            const twelveA = document.querySelector('.options12 .A');const twelveB = document.querySelector('.options12 .B');const twelveC = document.querySelector('.options12 .C');const twelveD = document.querySelector('.options12 .D');let twelvea = document.getElementById('12a');let twelveb = document.getElementById('12b');let twelvec = document.getElementById('12c');let twelved = document.getElementById('12d');
+                                            twelveA.addEventListener('click',()=>{twelvea.style.background ='red';twelved.style.background ='green'});
+                                            twelveB.addEventListener('click',()=>{twelveb.style.background ='red';twelved.style.background ='green'});
+                                            twelveC.addEventListener('click',()=>{twelvec.style.background ='red';twelved.style.background ='green'});
+                                            twelveD.addEventListener('click',()=>{twelved.style.background ='green';});
+                                        </script>
+                                    </div>
+
+                                    <div class="question-13">
+                                        <div class="thirteen" style="cursor: default;">13. A novice is discouraged from opening the CRT monitor for maintenance because <span style="font-weight: bolder;font-family: cursive;">(WASSCE Exams 2019 No 31-Data Processing)</span>.</div><br> 
+                                            <div class="options13">
+                                                <div class="A" id="13a">A.it cannot be appropriately reassembled after opening</div><br>
+                                                <div class="B" id="13b">B.it may contain high static voltage</div><br>
+                                                <div class="C" id="13c">C.it may harbour pests carrying infectious diseases</div><br>
+                                                <div class="D" id="13d">D.the tube is fragile</div><br>
+                                            </div>
+                                            <script>
+                                                const thirteenA = document.querySelector('.options13 .A');const thirteenB = document.querySelector('.options13 .B');const thirteenC = document.querySelector('.options13 .C');const thirteenD = document.querySelector('.options13 .D');let thirteena = document.getElementById('13a');let thirteenb = document.getElementById('13b');let thirteenc = document.getElementById('13c');let thirteend = document.getElementById('13d');
+                                                thirteenA.addEventListener('click',()=>{thirteena.style.background ='red';thirteend.style.background ='green'});
+                                                thirteenB.addEventListener('click',()=>{thirteenb.style.background ='red';thirteend.style.background ='green'});
+                                                thirteenC.addEventListener('click',()=>{thirteenc.style.background ='red';thirteend.style.background ='green'});
+                                                thirteenD.addEventListener('click',()=>{thirteend.style.background ='green';});
+                                            </script>
+                                        </div>
+
+                                    <div class="question-14">
+                                            <div class="fourteen" style="cursor: default;">14. The National Agency for the Prohibition of Trafficking in persons (NAPTIP) was established in the year <span style="font-weight: bolder;font-family: cursive;">(WASSCE Exams 2020 No 27-Civic Education)</span>.</div><br> 
+                                                <div class="options14">
+                                                    <div class="A" id="14a">A.2001</div><br>
+                                                    <div class="B" id="14b">B.2002</div><br>
+                                                    <div class="C" id="14c">C.2003</div><br>
+                                                    <div class="D" id="14d">D.2004</div><br>
+                                                </div>
+                                                <script>
+                                                    const fourteenA = document.querySelector('.options14 .A');const fourteenB = document.querySelector('.options14 .B');const fourteenC = document.querySelector('.options14 .C');const fourteenD = document.querySelector('.options14 .D');let fourteena = document.getElementById('14a');let fourteenb = document.getElementById('14b');let fourteenc = document.getElementById('14c');let fourteend = document.getElementById('14d');
+                                                    fourteenA.addEventListener('click',()=>{fourteena.style.background ='red';fourteenc.style.background ='green'});
+                                                    fourteenB.addEventListener('click',()=>{fourteenb.style.background ='red';fourteenc.style.background ='green'});
+                                                    fourteenC.addEventListener('click',()=>{fourteenc.style.background ='green';});
+                                                    fourteenD.addEventListener('click',()=>{fourteend.style.background ='red';fourteenc.style.background ='green'});
+                                                </script>
+                                            </div>
+                                            
+                                            <div class="question-15">
+                                                <div class="fifteen" style="cursor: default;">15. Which of the following arrangements shows increasing order of reactivity of the halogens? <span style="font-weight: bolder;font-family: cursive;">(WASSCE Exams 2016 No 11-Chemistry)</span>.</div><br> 
+                                                    <div class="options15">
+                                                        <div class="A" id="15a">A.F₂ > Cl₂ > Br₂ > I₂</div><br>
+                                                        <div class="B" id="15b">B.F₂ < Cl₂ < Br₂ < I₂</div><br>
+                                                        <div class="C" id="15c">C.I₂ > Br₂ > Cl₂ > F₂</div><br>
+                                                        <div class="D" id="15d">D.I₂ < Br₂ < Cl₂ < F₂</div><br>
+                                                    </div>
+                                                    <script>
+                                                        const fifteenA = document.querySelector('.options15 .A');const fifteenB = document.querySelector('.options15 .B');const fifteenC = document.querySelector('.options15 .C');const fifteenD = document.querySelector('.options15 .D');let fifteena = document.getElementById('15a');let fifteenb = document.getElementById('15b');let fifteenc = document.getElementById('15c');let fifteend = document.getElementById('15d');
+                                                        fifteenA.addEventListener('click',()=>{fifteena.style.background ='green';});
+                                                        fifteenB.addEventListener('click',()=>{fifteenb.style.background ='red';fifteena.style.background ='green'});
+                                                        fifteenC.addEventListener('click',()=>{fifteenc.style.background ='red';fifteena.style.background ='green'});
+                                                        fifteenD.addEventListener('click',()=>{fifteend.style.background ='red';fifteena.style.background ='green'});
+                                                    </script>
+                                                </div>   
+
+                                                <div class="question-16">
+                                                    <div class="sixteen" style="cursor: default;">16. The energy required to seperate the nucleus in an atom completely is known as <span style="font-weight: bolder;font-family: cursive;">(WASSCE Exams 2014 No 47-Physics)</span>.</div><br> 
+                                                        <div class="options16">
+                                                            <div class="A" id="16a">A.electron binding energy</div><br>
+                                                            <div class="B" id="16b">B.excitation energy</div><br>
+                                                            <div class="C" id="16c">C.mass defect of the atom</div><br>
+                                                            <div class="D" id="16d">D.nuclear binding energy</div><br>
+                                                        </div>
+                                                        <script>
+                                                            const sixteenA = document.querySelector('.options16 .A');const sixteenB = document.querySelector('.options16 .B');const sixteenC = document.querySelector('.options16 .C');const sixteenD = document.querySelector('.options16 .D');let sixteena = document.getElementById('16a');let sixteenb = document.getElementById('16b');let sixteenc = document.getElementById('16c');let sixteend = document.getElementById('16d');
+                                                            sixteenA.addEventListener('click',()=>{sixteena.style.background ='red';sixteend.style.background ='green'});
+                                                            sixteenB.addEventListener('click',()=>{sixteenb.style.background ='red';sixteend.style.background ='green'});
+                                                            sixteenC.addEventListener('click',()=>{sixteenc.style.background ='red';sixteend.style.background ='green'});
+                                                            sixteenD.addEventListener('click',()=>{sixteend.style.background ='green';});
+                                                        </script>
+                                                    </div>
+
+                                                    <div class="question-17">
+                                                        <div class="seventeen" style="cursor: default;">17. Acidic industrial waste can be treated with <span style="font-weight: bolder;font-family: cursive;">(WASSCE Exams 2001 No 49-Chemistry)</span>.</div><br> 
+                                                            <div class="options17">
+                                                                <div class="A" id="17a">A.brime</div><br>
+                                                                <div class="B" id="17b">B.ethanol</div><br>
+                                                                <div class="C" id="17c">C.lime</div><br>
+                                                                <div class="D" id="17d">D.water</div><br>
+                                                            </div>
+                                                            <script>
+                                                                const seventeenA = document.querySelector('.options17 .A');const seventeenB = document.querySelector('.options17 .B');const seventeenC = document.querySelector('.options17 .C');const seventeenD = document.querySelector('.options17 .D');let seventeena = document.getElementById('17a');let seventeenb = document.getElementById('17b');let seventeenc = document.getElementById('17c');let seventeend = document.getElementById('17d');
+                                                                seventeenA.addEventListener('click',()=>{seventeena.style.background ='red';seventeenc.style.background ='green'});
+                                                                seventeenB.addEventListener('click',()=>{seventeenb.style.background ='red';seventeenc.style.background ='green'});
+                                                                seventeenC.addEventListener('click',()=>{seventeenc.style.background ='green';});
+                                                                seventeenD.addEventListener('click',()=>{seventeend.style.background ='red';seventeenc.style.background ='green'});
+                                                            </script>
+                                                        </div>
+
+                                                        <div class="question-18">
+                                                            <div class="eighteen" style="cursor: default;">18. The Federal Road Safety Corps (FRSC) carries out all these functions EXCEPT <span style="font-weight: bolder;font-family: cursive;">(WASSCE Exams 2019 No 49-Civic Education)</span>.</div><br> 
+                                                                <div class="options18">
+                                                                    <div class="A" id="18a">A.construction of motorable roads</div><br>
+                                                                    <div class="B" id="18b">B.effective patrol operation</div><br>
+                                                                    <div class="C" id="18c">C.inspection of vehicles</div><br>
+                                                                    <div class="D" id="18d">D.prompt rescue mission</div><br>
+                                                                </div>
+                                                                <script>
+                                                                    const eighteenA = document.querySelector('.options18 .A');const eighteenB = document.querySelector('.options18 .B');const eighteenC = document.querySelector('.options18 .C');const eighteenD = document.querySelector('.options18 .D');let eighteena = document.getElementById('18a');let eighteenb = document.getElementById('18b');let eighteenc = document.getElementById('18c');let eighteend = document.getElementById('18d');
+                                                                    eighteenA.addEventListener('click',()=>{eighteena.style.background ='green';});
+                                                                    eighteenB.addEventListener('click',()=>{eighteenb.style.background ='red';eighteena.style.background ='green'});
+                                                                    eighteenC.addEventListener('click',()=>{eighteenc.style.background ='red';eighteena.style.background ='green'});
+                                                                    eighteenD.addEventListener('click',()=>{eighteend.style.background ='red';eighteena.style.background ='green'});
+                                                                </script>
+                                                            </div>
+
+                                                            <div class="question-19">
+                                                                <div class="nineteen" style="cursor: default;">19. Which of the following types of plancentation is not common amongest syncar pous pistils ?<span style="font-weight: bolder;font-family: cursive;">(WASSCE Exams 2017 No 22-Biology)</span>.</div><br> 
+                                                                    <div class="options19">
+                                                                        <div class="A" id="19a">A.Axile</div><br>
+                                                                        <div class="B" id="19b">B.Free central</div><br>
+                                                                        <div class="C" id="19c">C.Marginal</div><br>
+                                                                        <div class="D" id="19d">D.Parietal</div><br>
+                                                                    </div>
+                                                                    <script>
+                                                                        const nineteenA = document.querySelector('.options19 .A');const nineteenB = document.querySelector('.options19 .B');const nineteenC = document.querySelector('.options19 .C');const nineteenD = document.querySelector('.options19 .D');let nineteena = document.getElementById('19a');let nineteenb = document.getElementById('19b');let nineteenc = document.getElementById('19c');let nineteend = document.getElementById('19d');
+                                                                        nineteenA.addEventListener('click',()=>{nineteena.style.background ='red';nineteenc.style.background ='green'});
+                                                                        nineteenB.addEventListener('click',()=>{nineteenb.style.background ='red';nineteenc.style.background ='green'});
+                                                                        nineteenC.addEventListener('click',()=>{nineteenc.style.background ='green';});
+                                                                        nineteenD.addEventListener('click',()=>{nineteend.style.background ='red';nineteenc.style.background ='green'});
+                                                                    </script>
+                                                                </div>
+            <div class="question-20">
+                <div class="twenty" style="cursor: default;">20. The boiled points of HF₁, H₂O and NH₃ increase in the order of<span style="font-weight: bolder;font-family: cursive;">(WASSCE Exams 2016 No 5-Chemistry)</span>.</div><br> 
+                    <div class="options20">
+                        <div class="A" id="20a">A.HF < NH₃ < H₂O</div><br>
+                        <div class="B" id="20b">B.H₂O < HF < NH₃</div><br>
+                        <div class="C" id="20c">C.NH₃ < HF < H₂O</div><br>
+                        <div class="D" id="20d">D.NH₃ < H₂O < HF</div><br>
+                    </div>
+                    <script>
+                        const twentyA = document.querySelector('.options20 .A');const twentyB = document.querySelector('.options20 .B');const twentyC = document.querySelector('.options20 .C');const twentyD = document.querySelector('.options20 .D');let twentya = document.getElementById('20a');let twentyb = document.getElementById('20b');let twentyc = document.getElementById('20c');let twentyd = document.getElementById('20d');
+                        twentyA.addEventListener('click',()=>{twentya.style.background ='red';twentyd.style.background ='green'});
+                        twentyB.addEventListener('click',()=>{twentyb.style.background ='red';twentyd.style.background ='green'});
+                        twentyC.addEventListener('click',()=>{twentyc.style.background ='red';twentyd.style.background ='green'});
+                        twentyD.addEventListener('click',()=>{twentyd.style.background ='green';});
+                    </script>
+                </div>
+                
+            <div class="question-21">
+                <div class="twentyone" style="cursor: default;">21. Which of the following electromagnetic waves is most energetic?<span style="font-weight: bolder;font-family: cursive;">(WASSCE Exams 2018 No 20-Physics)</span>.</div><br> 
+                    <div class="options21">
+                        <div class="A" id="21a">A.Gamma rays</div><br>
+                        <div class="B" id="21b">B.Radio waves</div><br>
+                        <div class="C" id="21c">C.Ultra-violet rays</div><br>
+                        <div class="D" id="21d">D.X-ray</div><br>
+                    </div>
+                    <script>
+                        const twentyoneA = document.querySelector('.options21 .A');const twentyoneB = document.querySelector('.options21 .B');const twentyoneC = document.querySelector('.options21 .C');const twentyoneD = document.querySelector('.options21 .D');let twentyonea = document.getElementById('21a');let twentyoneb = document.getElementById('21b');let twentyonec = document.getElementById('21c');let twentyoned = document.getElementById('21d');
+                        twentyoneA.addEventListener('click',()=>{twentyonea.style.background ='red';twentyoneb.style.background ='green'});
+                        twentyoneB.addEventListener('click',()=>{twentyoneb.style.background ='green';});
+                        twentyoneC.addEventListener('click',()=>{twentyonec.style.background ='red';twentyoneb.style.background ='green'});
+                        twentyoneD.addEventListener('click',()=>{twentyoned.style.background ='red';twentyoneb.style.background ='green'});
+                    </script>
+                </div>
+
+            <div class="question-22">
+                <div class="twentytwo" style="cursor: default;">22. In computer maintenance, the dampen material an be used on the following devices EXCEPT<span style="font-weight: bolder;font-family: cursive;">(WASSCE Exams 2019 No 20-Data Processing)</span>.</div><br> 
+                    <div class="options22">
+                        <div class="A" id="22a">A.DVD lens</div><br>
+                        <div class="B" id="22b">B.keyboard</div><br>
+                        <div class="C" id="22c">C.mouse</div><br>
+                        <div class="D" id="22d">D.screen</div><br>
+                    </div>
+                    <script>
+                        const twentytwoA = document.querySelector('.options22 .A');const twentytwoB = document.querySelector('.options22 .B');const twentytwoC = document.querySelector('.options22 .C');const twentytwoD = document.querySelector('.options22 .D');let twentytwoa = document.getElementById('22a');let twentytwob = document.getElementById('22b');let twentytwoc = document.getElementById('22c');let twentytwod = document.getElementById('22d');
+                        twentytwoA.addEventListener('click',()=>{twentytwoa.style.background ='green';});
+                        twentytwoB.addEventListener('click',()=>{twentytwob.style.background ='red';twentytwoa.style.background ='green'});
+                        twentytwoC.addEventListener('click',()=>{twentytwoc.style.background ='red';twentytwoa.style.background ='green'});
+                        twentytwoD.addEventListener('click',()=>{twentytwod.style.background ='red';twentytwoa.style.background ='green'});
+                    </script>
+                </div>
+
+            <div class="question-23">
+                <div class="twentythree" style="cursor: default;">23. What do human traffickers use to instil fear into their victims?<span style="font-weight: bolder;font-family: cursive;">(WASSCE Exams 2019 No 33-Civic Education)</span>.</div><br> 
+                    <div class="options23">
+                        <div class="A" id="23a">A.Confrontation</div><br>
+                        <div class="B" id="23b">B.Elimination</div><br>
+                        <div class="C" id="23c">C.Exploitation</div><br>
+                        <div class="D" id="23d">D.Intimidation</div><br>
+                    </div>
+                    <script>
+                        const twentythreeA = document.querySelector('.options23 .A');const twentythreeB = document.querySelector('.options23 .B');const twentythreeC = document.querySelector('.options23 .C');const twentythreeD = document.querySelector('.options23 .D');let twentythreea = document.getElementById('23a');let twentythreeb = document.getElementById('23b');let twentythreec = document.getElementById('23c');let twentythreed = document.getElementById('23d');
+                        twentythreeA.addEventListener('click',()=>{twentythreea.style.background ='red';twentythreed.style.background ='green'});
+                        twentythreeB.addEventListener('click',()=>{twentythreeb.style.background ='red';twentythreed.style.background ='green'});
+                        twentythreeC.addEventListener('click',()=>{twentythreec.style.background ='red';twentythreed.style.background ='green'});
+                        twentythreeD.addEventListener('click',()=>{twentythreed.style.background ='green';});
+                    </script>
+                </div>
+
+            <div class="question-24">
+                <div class="twentyfour" style="cursor: default;">24. The scientist who introduced binomial nomenclature in the classification of organism was<span style="font-weight: bolder;font-family: cursive;">(WASSCE Exams 2018 No 33-Biology)</span>.</div><br> 
+                    <div class="options24">
+                        <div class="A" id="24a">A.Carolus Linnaeus</div><br>
+                        <div class="B" id="24b">B.Charles Darwin</div><br>
+                        <div class="C" id="24c">C.John Rat</div><br>
+                        <div class="D" id="24d">D.Louis Pasteur</div><br>
+                    </div>
+                    <script>
+                        const twentyfourA = document.querySelector('.options24 .A');const twentyfourB = document.querySelector('.options24 .B');const twentyfourC = document.querySelector('.options24 .C');const twentyfourD = document.querySelector('.options24 .D');let twentyfoura = document.getElementById('24a');let twentyfourb = document.getElementById('24b');let twentyfourc = document.getElementById('24c');let twentyfourd = document.getElementById('24d');
+                        twentyfourA.addEventListener('click',()=>{twentyfoura.style.background ='green';});
+                        twentyfourB.addEventListener('click',()=>{twentyfourb.style.background ='red';twentyfoura.style.background ='green'});
+                        twentyfourC.addEventListener('click',()=>{twentyfourc.style.background ='red';twentyfoura.style.background ='green'});
+                        twentyfourD.addEventListener('click',()=>{twentyfourd.style.background ='red';twentyfoura.style.background ='green'});
+                    </script>
+                </div>
+
+            <div class="question-25">
+                <div class="twentyfive" style="cursor: default;">25. Which of the following methods is suitable for preparing insoluble salts?<span style="font-weight: bolder;font-family: cursive;">(WASSCE Exams 2019 No 27-Chemistry)</span>.</div><br> 
+                    <div class="options25">
+                        <div class="A" id="25a">A.Double decomposition</div><br>
+                        <div class="B" id="25b">B.Neutralization</div><br>
+                        <div class="C" id="25c">C.Oxidation</div><br>
+                        <div class="D" id="25d">D.Thermal decomposition</div><br>
+                    </div>
+                    <script>
+                        const twentyfiveA = document.querySelector('.options25 .A');const twentyfiveB = document.querySelector('.options25 .B');const twentyfiveC = document.querySelector('.options25 .C');const twentyfiveD = document.querySelector('.options25 .D');let twentyfivea = document.getElementById('25a');let twentyfiveb = document.getElementById('25b');let twentyfivec = document.getElementById('25c');let twentyfived = document.getElementById('25d');
+                        twentyfiveA.addEventListener('click',()=>{twentyfivea.style.background ='green';});
+                        twentyfiveB.addEventListener('click',()=>{twentyfiveb.style.background ='red';twentyfivea.style.background ='green'});
+                        twentyfiveC.addEventListener('click',()=>{twentyfivec.style.background ='red';twentyfivea.style.background ='green'});
+                        twentyfiveD.addEventListener('click',()=>{twentyfived.style.background ='red';twentyfivea.style.background ='green'});
+                    </script>
+                </div>
+
+            <div class="question-26">
+                <div class="twentysix" style="cursor: default;">26. Which of the following devices transforms light energy to electrical energy?<span style="font-weight: bolder;font-family: cursive;">(WASSCE Exams 2017 No 19-Physics)</span>.</div><br> 
+                    <div class="options26">
+                        <div class="A" id="26a">A.Bulb</div><br>
+                        <div class="B" id="26b">B.Light Emitting Diode (LED)</div><br>
+                        <div class="C" id="26c">C.Solar cell</div><br>
+                        <div class="D" id="26d">D.Television</div><br>
+                    </div>
+                    <script>
+                        const twentysixA = document.querySelector('.options26 .A');const twentysixB = document.querySelector('.options26 .B');const twentysixC = document.querySelector('.options26 .C');const twentysixD = document.querySelector('.options26 .D');let twentysixa = document.getElementById('26a');let twentysixb = document.getElementById('26b');let twentysixc = document.getElementById('26c');let twentysixd = document.getElementById('26d');
+                        twentysixA.addEventListener('click',()=>{twentysixa.style.background ='red';twentysixc.style.background ='green'});
+                        twentysixB.addEventListener('click',()=>{twentysixb.style.background ='red';twentysixc.style.background ='green'});
+                        twentysixC.addEventListener('click',()=>{twentysixc.style.background ='green';});
+                        twentysixD.addEventListener('click',()=>{twentysixd.style.background ='red';twentysixc.style.background ='green'});
+                    </script>
+                </div>
+
+            <div class="question-27">
+                <div class="twentyseven" style="cursor: default;">27. Which of the following is the punitive measure against cultism?<span style="font-weight: bolder;font-family: cursive;">(WASSCE Exams 2019 No 23-Civic Education)</span>.</div><br> 
+                    <div class="options27">
+                        <div class="A" id="27a">A.Arrest and Prosecution of suspects</div><br>
+                        <div class="B" id="27b">B.Counselling and enlightment in school</div><br>
+                        <div class="C" id="27c">C.Good parental responsibility and care</div><br>
+                        <div class="D" id="27d">D.true and sincere religious inculcation</div><br>
+                    </div>
+                    <script>
+                        const twentysevenA = document.querySelector('.options27 .A');const twentysevenB = document.querySelector('.options27 .B');const twentysevenC = document.querySelector('.options27 .C');const twentysevenD = document.querySelector('.options27 .D');let twentysevena = document.getElementById('27a');let twentysevenb = document.getElementById('27b');let twentysevenc = document.getElementById('27c');let twentysevend = document.getElementById('27d');
+                        twentysevenA.addEventListener('click',()=>{twentysevena.style.background ='green';});
+                        twentysevenB.addEventListener('click',()=>{twentysevenb.style.background ='red';twentysevena.style.background ='green'});
+                        twentysevenC.addEventListener('click',()=>{twentysevenc.style.background ='red';twentysevena.style.background ='green'});
+                        twentysevenD.addEventListener('click',()=>{twentysevend.style.background ='red';twentysevena.style.background ='green'});
+                    </script>
+                </div>
+
+            <div class="question-28">
+                <div class="twentyeight" style="cursor: default;">28. Translate 2m2+3n-9 as a BASIC arithmetic expression<span style="font-weight: bolder;font-family: cursive;">(WASSCE Exams 2019 No 22-Computer Studies)</span>.</div><br> 
+                    <div class="options28">
+                        <div class="A" id="28a">A.2*m*2+3*n-9</div><br>
+                        <div class="B" id="28b">B.2*m^2+3*n-9</div><br>
+                        <div class="C" id="28c">C.2*2*m+3*n-9</div><br>
+                        <div class="D" id="28d">D.2*m*m*n+3-9</div><br>
+                    </div>
+                    <script>
+                        const twentyeightA = document.querySelector('.options28 .A');const twentyeightB = document.querySelector('.options28 .B');const twentyeightC = document.querySelector('.options28 .C');const twentyeightD = document.querySelector('.options28 .D');let twentyeighta = document.getElementById('28a');let twentyeightb = document.getElementById('28b');let twentyeightc = document.getElementById('28c');let twentyeightd = document.getElementById('28d');
+                        twentyeightA.addEventListener('click',()=>{twentyeighta.style.background ='green';});
+                        twentyeightB.addEventListener('click',()=>{twentyeightb.style.background ='red';twentyeighta.style.background ='green'});
+                        twentyeightC.addEventListener('click',()=>{twentyeightc.style.background ='red';twentyeighta.style.background ='green'});
+                        twentyeightD.addEventListener('click',()=>{twentyeightd.style.background ='red';twentyeighta.style.background ='green'});
+                    </script>
+                </div>
+
+            <div class="question-29">
+                <div class="twentynine" style="cursor: default;">29. A reference to another page or resource on a website is done by<span style="font-weight: bolder;font-family: cursive;">(WASSCE Exams 2018 No 25-Data Processing)</span>.</div><br> 
+                    <div class="options29">
+                        <div class="A" id="29a">A.FTP</div><br>
+                        <div class="B" id="29b">B.Hyperlinks</div><br>
+                        <div class="C" id="29c">C.SMTP</div><br>
+                        <div class="D" id="29d">D.Web page</div><br>
+                     </div>
+                    <script>
+                        const twentynineA = document.querySelector('.options29 .A');const twentynineB = document.querySelector('.options29 .B');const twentynineC = document.querySelector('.options29 .C');const twentynineD = document.querySelector('.options29 .D');let twentyninea = document.getElementById('29a');let twentynineb = document.getElementById('29b');let twentyninec = document.getElementById('29c');let twentynined = document.getElementById('29d');
+                        twentynineA.addEventListener('click',()=>{twentyninea.style.background ='red';twentynineb.style.background ='green'});
+                        twentynineB.addEventListener('click',()=>{twentynineb.style.background ='green';});
+                        twentynineC.addEventListener('click',()=>{twentyninec.style.background ='red';twentynineb.style.background ='green'});
+                        twentynineD.addEventListener('click',()=>{twentynined.style.background ='red';twentynineb.style.background ='green'});
+                       </script>
+                </div>
+
+            <div class="question-30">
+                <div class="thirty" style="cursor: default;">30. Resonance occurs when one vibrating object causes a second object to vibrate at its own natural<span style="font-weight: bolder;font-family: cursive;">(WASSCE Exams 2016 No 13-Physics)</span>.</div><br> 
+                    <div class="options30">
+                        <div class="A" id="30a">A.amplitude</div><br>
+                        <div class="B" id="30b">B.frequency</div><br>
+                        <div class="C" id="30c">C.intensity</div><br>
+                        <div class="D" id="30d">D.speed</div><br>
+                        </div>
+                    <script>
+                        const thirtyA = document.querySelector('.options30 .A');const thirtyB = document.querySelector('.options30 .B');const thirtyC = document.querySelector('.options30 .C');const thirtyD = document.querySelector('.options30 .D');let thirtya = document.getElementById('30a');let thirtyb = document.getElementById('30b');let thirtyc = document.getElementById('30c');let thirtyd = document.getElementById('30d');
+                        thirtyA.addEventListener('click',()=>{thirtya.style.background ='red';thirtyb.style.background ='green'});
+                        thirtyB.addEventListener('click',()=>{thirtyb.style.background ='green';});
+                        thirtyC.addEventListener('click',()=>{thirtyc.style.background ='red';thirtyb.style.background ='green'});
+                        thirtyD.addEventListener('click',()=>{thirtyd.style.background ='red';thirtyb.style.background ='green'});
+                       </script>
+                </div>
+
+            <div class="question-31">
+                <div class="thirtyone" style="cursor: default;">31. Which of the following feautures is used by Chameleons to escape predation?<span style="font-weight: bolder;font-family: cursive;">(WASSCE Exams 2013 No 58-Biology)</span>.</div><br> 
+                    <div class="options31">
+                        <div class="A" id="31a">A.Adaptive colouration</div><br>
+                        <div class="B" id="31b">B.Coiling tail</div><br>
+                        <div class="C" id="31c">C.Fearsome appearance</div><br>
+                        <div class="D" id="31d">D.Offensive smell</div><br>
+                        </div>
+                    <script>
+                        const thirtyoneA = document.querySelector('.options31 .A');const thirtyoneB = document.querySelector('.options31 .B');const thirtyoneC = document.querySelector('.options31 .C');const thirtyoneD = document.querySelector('.options31 .D');let thirtyonea = document.getElementById('31a');let thirtyoneb = document.getElementById('31b');let thirtyonec = document.getElementById('31c');let thirtyoned = document.getElementById('31d');
+                        thirtyoneA.addEventListener('click',()=>{thirtyonea.style.background ='green';});
+                        thirtyoneB.addEventListener('click',()=>{thirtyoneb.style.background ='red';thirtyonea.style.background ='green'});
+                        thirtyoneC.addEventListener('click',()=>{thirtyonec.style.background ='red';thirtyonea.style.background ='green'});
+                        thirtyoneD.addEventListener('click',()=>{thirtyoned.style.background ='red';thirtyonea.style.background ='green'});
+                        </script>
+                    </div>
+
+        </div>
+    </div>
+
+
+    <div class="settime-pane">
+        <input type="number" id="make-hours" placeholder="Hours">
+        <button type="submit" class="set" onclick="setit()">Set Automatically</button>
+    </div>
+
+    <div class="color-pane">
+        <div class="input-text">
+        <input type="text" placeholder="Enter the color" id="color">
+        </div>
+    </div>
+
+    <div class="activate-pane" id="active-body">
+        <span class="title">Enter Activation Code</span>
+        <input type="text" placeholder="Input Activation Code" id="active-word">
+        <div class="comment">
+            <div class="wrong">Wrong Code</div>
+            <div class="correct">Correct Code</div>
+        </div>
+    </div>
+
+    <div class="error">
+        <div class="error-title" id="error-title">There is nothing today</div>
+    </div>
+
+
+    </div>
+    
+
+    <script src="script.js"></script>
+    <script src="timeline.js"></script>
+    <script src="color.js"></script>
+    <script src="null.js"></script>
+
+</body>
+</html>

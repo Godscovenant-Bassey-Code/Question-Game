@@ -1,0 +1,492 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: rgb(2, 41, 2);
+    min-height: 100vh;
+}
+.title-banner {
+    /* background: red; */
+    text-align: center; 
+    position: absolute;
+    top: 40%;width: 100%;
+    padding: 20px 0;
+    cursor: default;
+    /* display: none; */
+    /* margin-top: 15%; */
+}
+.title-banner.close {
+    display: none;
+}
+
+.mirror-off {
+    height: 100vh;
+    position: absolute;
+    top: 0%;
+    width: 100%;
+}
+.title-banner .game-title {
+    color: #fff;
+    font-weight: bolder;
+    font-size: 3em;
+    text-transform: uppercase;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: flex;
+    justify-content: center;
+}
+.title-banner .sub-title {
+    color: #fff;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-top: 10px;
+    font-size: 2em;
+}
+.title-banner #key-text {
+    color: #fff;
+    margin-top: 10px;
+    font-family: "Press Start 2P", monospace;
+    font-size: 1.7em;
+}
+.title-banner .blink {
+    animation: blinker 2s steps(4, end) infinite;
+}
+@keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+  }
+
+  
+.container {
+    display: none;
+}
+.container.main {
+    display: block;
+}
+.title-link {
+    padding: 20px 0;
+    text-align: center;
+    font-size: 2em;
+    cursor: default;
+}
+.title-link .title {
+    color: #fff;
+    font-weight: bolder;
+    font-size: 2em;
+    text-transform: uppercase;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: flex;
+    justify-content: center;
+}
+.title-link .inertia {
+    color: #fff;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.settings {
+    color: #fff;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: red;
+    padding: 20px 20px;
+    position: absolute;
+    left: 10%;
+    border-radius: 5px;
+    top: 6%;
+    cursor: pointer;
+}
+.settings:hover {
+    background: rgb(255, 77, 77);
+    transition: .5s;
+}
+.settings:active {
+    transform: translateY(.5em);
+    cursor: progress;
+}
+.activate {
+    color: #fff;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: red;
+    padding: 20px 20px;
+    position: absolute;
+    right: 10%;
+    border-radius: 5px;
+    top: 6%;
+    cursor: pointer;
+}
+.activate:hover {
+    background: rgb(255, 77, 77);
+    transition: .5s;
+}
+.activate:active {
+    transform: translateY(.5em);
+    cursor: progress;
+}
+.settings-pane {
+    background: #fff;
+    position: fixed;
+    padding: 3% 7%;
+    left: 5%;
+    text-align: center;
+    justify-content: center;
+    font-family: cursive;
+    display: none;
+    top: 17%;
+}
+.settings-pane.open {
+    display: block;
+}
+.settings-pane .settime {
+    text-align: center;
+    background-color: rgb(233, 233, 233);
+    justify-content: center;
+    position: absolute;
+    top: 10%;
+    width: 100%;
+    left: 0;
+    cursor: pointer;
+}
+.settings-pane .settime:hover {
+    background: rgb(168, 168, 168);
+}
+.settings-pane .settime:active {
+    background: rgb(148, 148, 148);
+}
+.settings-pane .colors {
+    position: absolute;
+    background: rgb(233, 233, 233);
+    width: 100%;
+    left: 0;
+    margin-top: 6%;
+    cursor: pointer;
+}
+.settings-pane .colors:hover {
+    background: rgb(168, 168, 168);
+}
+.settings-pane .colors:active {
+    background: rgb(148, 148, 148);
+}
+.settime-pane {
+    background: red;
+    position: fixed;
+    padding: 20px 20px;
+    outline: none;
+    left: 2%;
+    margin-top: 3%;
+    display: none;
+}
+.settime-pane.open {
+    display: block;
+}
+.settime-pane #make-hours{
+    height: 5vh;width: 100%;
+    font-size: 19px;
+    outline: green;
+    text-align: center;
+}
+.settime-pane .set {
+    width: 100%;
+    background: purple;
+    height: 6vh;
+    border: none;
+    color: #fff;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border-radius: 10px;
+    font-size: 1.7em;
+    cursor: pointer;
+    margin-top: 6%;
+}
+.settime-pane .set:active {
+    transform: translateY(.5em);
+    cursor: progress;
+}
+.time {
+    display: flex;
+    /* background: #fff; */
+    padding: .4%;
+    backdrop-filter: blur(20px);
+    text-align: center;
+    justify-content: center;
+    font-weight: bolder;
+    font-size: 1.6em;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #fff;
+    cursor: default;
+}
+.time .realtime {
+    display: flex;
+}
+.time .settime-place {
+    display: flex;
+}
+.color-pane {
+    background: red;
+    position: absolute;
+    padding: 2% 18%;
+    left: 3%;
+    margin-top: 3%;
+    text-align: center;
+    justify-content: center;
+    display: none;
+}
+.color-pane.open {
+    display: block;
+}
+.color-pane .input-text{
+    /* padding: 3%; */
+    width: 100%;
+    position: absolute;
+    left: 0%;
+    /* top: 5%; */
+    /* margin-top: 8%; */
+    background: red;
+    text-align: center;
+
+}
+.color-pane .input-text #color {
+    width: 80%;
+    padding: 2%;
+    font-size: 1.3em;
+    outline: none;
+}
+.activate-pane {
+    background: rgb(2, 58, 2);
+    position: fixed;
+    padding: 0% 10%;
+    height: 20vh;
+    text-align: center;
+    justify-content: center;
+    right: 35%;
+    display: none;
+}.activate-pane.open {
+    display: block;
+}
+.activate-pane .title {
+    display: flex;
+    color: #fff;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-top: 16%;
+}
+.activate-pane input {
+    width: 90%;
+    position: absolute;
+    left: 4.5%;
+    height: 6vh;
+    outline: none;
+    font-size: 20px;
+    text-align: center;
+}
+.activate-pane .comment  {
+    color: #fff;
+    display: flex;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    /* background: rgb(2, 41, 2); */
+    text-align: center;
+    margin-top: 40%;
+    margin-left: 18%;
+}
+.activate-pane .comment .correct {
+    display: none;
+}.activate-pane .comment .wrong {
+    display: none;
+}.activate-pane .comment .correct.open {
+    display: flex;
+}.activate-pane .comment .wrong.open {
+    display: flex;
+}
+.error {
+    /* background: #f00; */
+    text-align: center;
+    margin-top: 10%;
+    color: #fff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.9em;
+}
+.game-cover {
+    /* background: red; */
+    backdrop-filter: blur(20px);
+    border: 1px solid #fff;
+    border-radius: 10px;
+    width: 98%;
+    position: fixed;
+    padding: 98% 0;
+    left: 1%;
+    top: 30%;
+    display: none;
+    /* overflow-y: scroll; */
+}
+.game-cover.open {
+    display: block;
+}
+.game-cover .question-title {
+    position: fixed;
+    top: 0;
+    /* background: red; */
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid #fff;
+    padding: 1% 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    font-weight: bolder;
+    cursor: default;
+}
+.game-cover .not-activated {
+    position: fixed;
+    top: 10%;
+    width: 100%;
+    text-align: center;
+    padding: 1% 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    font-weight: bolder;
+    color: #fff;
+    cursor: default;
+    display: block;
+}
+.game-cover .not-activated.close {
+    display: none;
+}
+.game-cover .questions {
+    position: fixed;
+    top: 3%;left: 2%;
+    /* background: red; */
+    backdrop-filter: blur(20px);
+    height: 20vh;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    width: 96%;
+    padding: 17% 0;
+    display: none;
+}
+.game-cover .questions.open {
+    display: block;
+}
+.game-cover .questions .question-1 {
+    position: absolute;
+    top: 2%;
+    left: 5%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 32px;
+    color: #fff;
+    width: 89%;
+}
+.game-cover .questions .question-2 {position: absolute;top: 120%;left: 5%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;font-size: 32px;color: #fff;width: 89%;}
+.game-cover .questions .question-3 {position: absolute;top: 240%;left: 5%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;font-size: 32px;color: #fff;width: 89%;}
+.game-cover .questions .question-4 {position: absolute;top: 360%;left: 5%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;font-size: 32px;color: #fff;width: 89%;}
+.game-cover .questions .question-5 {position: absolute;top: 480%;left: 5%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;font-size: 32px;color: #fff;width: 89%;}
+.game-cover .questions .question-6 {position: absolute;top: 600%;left: 5%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;font-size: 32px;color: #fff;width: 89%;}
+.game-cover .questions .question-7 {position: absolute;top: 720%;left: 5%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;font-size: 32px;color: #fff;width: 89%;}
+.game-cover .questions .question-8 {position: absolute;top: 840%;left: 5%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;font-size: 32px;color: #fff;width: 89%;}
+.game-cover .questions .question-9 {position: absolute;top: 960%;left: 5%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;font-size: 32px;color: #fff;width: 89%;}
+.game-cover .questions .question-10 {position: absolute;top: 1080%;left: 5%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;font-size: 32px;color: #fff;width: 89%;} 
+.game-cover .questions .question-11 {position: absolute;top: 1200%;left: 5%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;font-size: 32px;color: #fff;width: 89%;} 
+.game-cover .questions .question-12 {position: absolute;top: 1320%;left: 5%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;font-size: 32px;color: #fff;width: 89%;} 
+.game-cover .questions .question-13 {position: absolute;top: 1440%;left: 5%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;font-size: 32px;color: #fff;width: 89%;}   
+.game-cover .questions .question-14 {position: absolute;top: 1560%;left: 5%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;font-size: 32px;color: #fff;width: 89%;}  
+.game-cover .questions .question-15 {position: absolute;top: 1680%;left: 5%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;font-size: 32px;color: #fff;width: 89%;}  
+.game-cover .questions .question-16 {position: absolute;top: 1800%;left: 5%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;font-size: 32px;color: #fff;width: 89%;}
+.game-cover .questions .question-17 {position: absolute;top: 1920%;left: 5%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;font-size: 32px;color: #fff;width: 89%;} 
+.game-cover .questions .question-18 {position: absolute;top: 2040%;left: 5%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;font-size: 32px;color: #fff;width: 89%;} 
+.game-cover .questions .question-19 {position: absolute;top: 2160%;left: 5%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;font-size: 32px;color: #fff;width: 89%;}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+.game-cover .questions .question-20 {position: absolute;top: 2280%;left: 5%;font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;font-size: 32px;color: #fff;width: 89%;}
+.game-cover .questions .question-21 {position: absolute;top: 2400%;left: 5%;font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;font-size: 32px;color: #fff;width: 89%;}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+.game-cover .questions .question-22 {position: absolute;top: 2520%;left: 5%;font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;font-size: 32px;color: #fff;width: 89%;}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+.game-cover .questions .question-23 {position: absolute;top: 2640%;left: 5%;font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;font-size: 32px;color: #fff;width: 89%;}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+.game-cover .questions .question-24 {position: absolute;top: 2760%;left: 5%;font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;font-size: 32px;color: #fff;width: 89%;}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+.game-cover .questions .question-25 {position: absolute;top: 2880%;left: 5%;font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;font-size: 32px;color: #fff;width: 89%;}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+.game-cover .questions .question-26 {position: absolute;top: 3000%;left: 5%;font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;font-size: 32px;color: #fff;width: 89%;}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+.game-cover .questions .question-27 {position: absolute;top: 3120%;left: 5%;font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;font-size: 32px;color: #fff;width: 89%;}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+.game-cover .questions .question-28 {position: absolute;top: 3240%;left: 5%;font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;font-size: 32px;color: #fff;width: 89%;}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+.game-cover .questions .question-29 {position: absolute;top: 3360%;left: 5%;font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;font-size: 32px;color: #fff;width: 89%;}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+.game-cover .questions .question-30 {position: absolute;top: 3480%;left: 5%;font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;font-size: 32px;color: #fff;width: 89%;}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+.game-cover .questions .question-31 {position: absolute;top: 3600%;left: 5%;font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;font-size: 32px;color: #fff;width: 89%;}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+.options1 .A, .options1 .B, .options1 .C, .options1 .D{
+    padding: 1% 0% 1% 4%;
+    justify-content: space-between;
+    border-radius: 35px;
+    cursor: pointer;
+}
+.options2 .A, .options2 .B, .options2 .C, .options2 .D{padding: 1% 0% 1% 4%;justify-content: space-between;border-radius: 35px;cursor: pointer;}
+.options3 .A, .options3 .B, .options3 .C, .options3 .D{padding: 1% 0% 1% 4%;justify-content: space-between;border-radius: 35px;cursor: pointer;}
+.options4 .A, .options4 .B, .options4 .C, .options4 .D{padding: 1% 0% 1% 4%;justify-content: space-between;border-radius: 35px;cursor: pointer;}
+.options5 .A, .options5 .B, .options5 .C, .options5 .D{padding: 1% 0% 1% 4%;justify-content: space-between;border-radius: 35px;cursor: pointer;}
+.options6 .A, .options6 .B, .options6 .C, .options6 .D{padding: 1% 0% 1% 4%;justify-content: space-between;border-radius: 35px;cursor: pointer;}
+.options7 .A, .options7 .B, .options7 .C, .options7 .D{padding: 1% 0% 1% 4%;justify-content: space-between;border-radius: 35px;cursor: pointer;}
+.options8 .A, .options8 .B, .options8 .C, .options8 .D{padding: 1% 0% 1% 4%;justify-content: space-between;border-radius: 35px;cursor: pointer;}
+.options9 .A, .options9 .B, .options9 .C, .options9 .D{padding: 1% 0% 1% 4%;justify-content: space-between;border-radius: 35px;cursor: pointer;}
+.options10 .A, .options10 .B, .options10 .C, .options10 .D{padding: 1% 0% 1% 4%;justify-content: space-between;border-radius: 35px;cursor: pointer;}
+.options11 .A, .options11 .B, .options11 .C, .options11 .D{padding: 1% 0% 1% 4%;justify-content: space-between;border-radius: 35px;cursor: pointer;}
+.options12 .A, .options12 .B, .options12 .C, .options12 .D{padding: 1% 0% 1% 4%;justify-content: space-between;border-radius: 35px;cursor: pointer;}
+.options13 .A, .options13 .B, .options13 .C, .options13 .D{padding: 1% 0% 1% 4%;justify-content: space-between;border-radius: 35px;cursor: pointer;}
+.options14 .A, .options14 .B, .options14 .C, .options14 .D{padding: 1% 0% 1% 4%;justify-content: space-between;border-radius: 35px;cursor: pointer;}
+.options15 .A, .options15 .B, .options15 .C, .options15 .D{padding: 1% 0% 1% 4%;justify-content: space-between;border-radius: 35px;cursor: pointer;}
+.options16 .A, .options16 .B, .options16 .C, .options16 .D{padding: 1% 0% 1% 4%;justify-content: space-between;border-radius: 35px;cursor: pointer;}
+.options17 .A, .options17 .B, .options17 .C, .options17 .D{padding: 1% 0% 1% 4%;justify-content: space-between;border-radius: 35px;cursor: pointer;}
+.options18 .A, .options18 .B, .options18 .C, .options18 .D{padding: 1% 0% 1% 4%;justify-content: space-between;border-radius: 35px;cursor: pointer;}
+.options19 .A, .options19 .B, .options19 .C, .options19 .D{padding: 1% 0% 1% 4%;justify-content: space-between;border-radius: 35px;cursor: pointer;}
+.options20 .A, .options20 .B, .options20 .C, .options20 .D{padding: 1% 0% 1% 4%;justify-content: space-between;border-radius: 35px;cursor: pointer;}
+.options21 .A, .options21 .B, .options21 .C, .options21 .D{padding: 1% 0% 1% 4%;justify-content: space-between;border-radius: 35px;cursor: pointer;}
+.options22 .A, .options22 .B, .options22 .C, .options22 .D{padding: 1% 0% 1% 4%;justify-content: space-between;border-radius: 35px;cursor: pointer;}
+.options23 .A, .options23 .B, .options23 .C, .options23 .D{padding: 1% 0% 1% 4%;justify-content: space-between;border-radius: 35px;cursor: pointer;}
+.options24 .A, .options24 .B, .options24 .C, .options24 .D{padding: 1% 0% 1% 4%;justify-content: space-between;border-radius: 35px;cursor: pointer;}
+.options25 .A, .options25 .B, .options25 .C, .options25 .D{padding: 1% 0% 1% 4%;justify-content: space-between;border-radius: 35px;cursor: pointer;}
+.options26 .A, .options26 .B, .options26 .C, .options26 .D{padding: 1% 0% 1% 4%;justify-content: space-between;border-radius: 35px;cursor: pointer;}
+.options27 .A, .options27 .B, .options27 .C, .options27 .D{padding: 1% 0% 1% 4%;justify-content: space-between;border-radius: 35px;cursor: pointer;}
+.options28 .A, .options28 .B, .options28 .C, .options28 .D{padding: 1% 0% 1% 4%;justify-content: space-between;border-radius: 35px;cursor: pointer;}
+.options29 .A, .options29 .B, .options29 .C, .options29 .D{padding: 1% 0% 1% 4%;justify-content: space-between;border-radius: 35px;cursor: pointer;}
+.options30 .A, .options30 .B, .options30 .C, .options30 .D{padding: 1% 0% 1% 4%;justify-content: space-between;border-radius: 35px;cursor: pointer;}
+.options31 .A, .options31 .B, .options31 .C, .options31 .D{padding: 1% 0% 1% 4%;justify-content: space-between;border-radius: 35px;cursor: pointer;}
+.options1 .A:hover, .options1 .B:hover, .options1 .C:hover, .options1 .D:hover {border: 1px solid green;}
+.options2 .A:hover, .options2 .B:hover, .options2 .C:hover, .options2 .D:hover {border: 1px solid green;}
+.options3 .A:hover, .options3 .B:hover, .options3 .C:hover, .options3 .D:hover {border: 1px solid green;}
+.options4 .A:hover, .options4 .B:hover, .options4 .C:hover, .options4 .D:hover {border: 1px solid green;}
+.options5 .A:hover, .options5 .B:hover, .options5 .C:hover, .options5 .D:hover {border: 1px solid green;}
+.options6 .A:hover, .options6 .B:hover, .options6 .C:hover, .options6 .D:hover {border: 1px solid green;}
+.options7 .A:hover, .options7 .B:hover, .options7 .C:hover, .options7 .D:hover {border: 1px solid green;}
+.options8 .A:hover, .options8 .B:hover, .options8 .C:hover, .options8 .D:hover {border: 1px solid green;}
+.options9 .A:hover, .options9 .B:hover, .options9 .C:hover, .options9 .D:hover {border: 1px solid green;}
+.options10 .A:hover, .options10 .B:hover, .options10 .C:hover, .options10 .D:hover {border: 1px solid green;}
+.options11 .A:hover, .options11 .B:hover, .options11 .C:hover, .options11 .D:hover {border: 1px solid green;}
+.options12 .A:hover, .options12 .B:hover, .options12 .C:hover, .options12 .D:hover {border: 1px solid green;}
+.options13 .A:hover, .options13 .B:hover, .options13 .C:hover, .options13 .D:hover {border: 1px solid green;}
+.options14 .A:hover, .options14 .B:hover, .options14 .C:hover, .options14 .D:hover {border: 1px solid green;}
+.options15 .A:hover, .options15 .B:hover, .options15 .C:hover, .options15 .D:hover {border: 1px solid green;}
+.options16 .A:hover, .options16 .B:hover, .options16 .C:hover, .options16 .D:hover {border: 1px solid green;}
+.options17 .A:hover, .options17 .B:hover, .options17 .C:hover, .options17 .D:hover {border: 1px solid green;}
+.options18 .A:hover, .options18 .B:hover, .options18 .C:hover, .options18 .D:hover {border: 1px solid green;}
+.options19 .A:hover, .options19 .B:hover, .options19 .C:hover, .options19 .D:hover {border: 1px solid green;}
+.options20 .A:hover, .options20 .B:hover, .options20 .C:hover, .options20 .D:hover {border: 1px solid green;}
+.options21 .A:hover, .options21 .B:hover, .options21 .C:hover, .options21 .D:hover {border: 1px solid green;}
+.options22 .A:hover, .options22 .B:hover, .options22 .C:hover, .options22 .D:hover {border: 1px solid green;}
+.options23 .A:hover, .options23 .B:hover, .options23 .C:hover, .options23 .D:hover {border: 1px solid green;}
+.options24 .A:hover, .options24 .B:hover, .options24 .C:hover, .options24 .D:hover {border: 1px solid green;}
+.options25 .A:hover, .options25 .B:hover, .options25 .C:hover, .options25 .D:hover {border: 1px solid green;}
+.options26 .A:hover, .options26 .B:hover, .options26 .C:hover, .options26 .D:hover {border: 1px solid green;}
+.options27 .A:hover, .options27 .B:hover, .options27 .C:hover, .options27 .D:hover {border: 1px solid green;}
+.options28 .A:hover, .options28 .B:hover, .options28 .C:hover, .options28 .D:hover {border: 1px solid green;}
+.options29 .A:hover, .options29 .B:hover, .options29 .C:hover, .options29 .D:hover {border: 1px solid green;}
+.options30 .A:hover, .options30 .B:hover, .options30 .C:hover, .options30 .D:hover {border: 1px solid green;}
+.options31 .A:hover, .options31 .B:hover, .options31 .C:hover, .options31 .D:hover {border: 1px solid green;}
